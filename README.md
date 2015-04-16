@@ -1,3 +1,3 @@
 # Normalized Conditional Compression Distance
 
-Programs to compute the NCCD and perform phylogenomics on the 48 bird species.
+Programs to compute the NCCD (Normalized Conditional Compression Distance) and perform phylogenomics on 48 bird species.
