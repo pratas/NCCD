@@ -25,11 +25,11 @@ For other purposes, such as a simple information distance between two sequences 
 <pre>
 cd scripts
 </pre>
-and run
+and run 
 <pre>
 . NCCD ../examples/fileA ../examples/fileB
 </pre>
-
+It will calculate the NCCD on two synthetic examples included in the system.
 
 ## ISSUES ##
 

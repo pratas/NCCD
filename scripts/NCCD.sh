@@ -26,6 +26,7 @@ else
   Cyx=`cat REPORTyx | grep "Total bytes" | awk '{print $3;}'`;
   nccd=`echo "scale=6; $Cyx / $Cy" | bc -l`;
 fi
+printf "\n";
 printf "====================================================\n";
 printf "NCCD: $nccd\n";
 printf "====================================================\n";
