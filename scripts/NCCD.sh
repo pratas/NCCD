@@ -16,12 +16,12 @@ printf "C(y)=$Cy\n";
 echo "Running direction ...";
 if (( $Cx < $Cy )); then
   rm -f REPORTxy
-  (./GeCo $GECO_COND_PARAM -r $1 $2 ) &> REPORTxy;
+  (./GeCo $GECO_COND_PARAM -r $1 $2 ) > REPORTxy;
   Cxy=`cat REPORTxy | grep "Total bytes" | cut -d" " -f3`
   nccd=`echo "scale=6; $Cxy / $Cx" | bc -l`
 else
   rm -f REPORTyx
-  (./GeCo $GECO_COND_PARAM -r $2 $1 ) &> REPORTyx;
+  (./GeCo $GECO_COND_PARAM -r $2 $1 ) > REPORTyx;
   Cyx=`cat REPORTyx | grep "Total bytes" | cut -d" " -f3`
   nccd=`echo "scale=6; $Cyx / $Cy" | bc -l`
 fi
