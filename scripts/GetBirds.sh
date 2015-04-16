@@ -19,7 +19,7 @@ function downloadEach
     fi
     done
   }
-echo "Starting Donwloads ..."; done;
+echo "Starting Donwloads ...";
 downloadEach "$WGETOP" "ftp://climb.genomics.cn/pub/10.5524/101001_102000/101001/duck.scafSeq.gapFilled.noMito" "B1"
 downloadEach "$WGETOP" "ftp://climb.genomics.cn/pub/10.5524/101001_102000/101002/Egretta_garzetta.fa.gz" "B2"
 downloadEach "$WGETOP" "ftp://climb.genomics.cn/pub/10.5524/101001_102000/101003/Nipponia_nippon.fa.gz" "B3"
