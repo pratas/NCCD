@@ -14,15 +14,19 @@ Cy=`cat REPORTy | grep "Total bytes" | awk '{print $3;}'`;
 printf "C(x)=$Cx\n";
 printf "C(y)=$Cy\n";
 echo "Running direction ...";
-if (( $Cx < $Cy )); then
-  rm -f REPORTxy
+if (( $Cx < $Cy )); 
+then
+  rm -f REPORTxy;
   (./GeCo $GECO_COND_PARAM -r $1 $2 ) > REPORTxy;
-  Cxy=`cat REPORTxy | grep "Total bytes" | cut -d" " -f3`
-  nccd=`echo "scale=6; $Cxy / $Cx" | bc -l`
+  Cxy=`cat REPORTxy | grep "Total bytes" | awk '{print $3;}'`;
+  nccd=`echo "scale=6; $Cxy / $Cx" | bc -l`;
 else
-  rm -f REPORTyx
+  rm -f REPORTyx;
   (./GeCo $GECO_COND_PARAM -r $2 $1 ) > REPORTyx;
-  Cyx=`cat REPORTyx | grep "Total bytes" | cut -d" " -f3`
-  nccd=`echo "scale=6; $Cyx / $Cy" | bc -l`
+  Cyx=`cat REPORTyx | grep "Total bytes" | awk '{print $3;}'`;
+  nccd=`echo "scale=6; $Cyx / $Cy" | bc -l`;
 fi
-printf "$nccd\n"
+printf "====================================================";
+printf "NCCD: $nccd\n";
+printf "====================================================";
+
