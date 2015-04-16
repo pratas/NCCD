@@ -21,11 +21,15 @@ Then, simply run:
 
 It will download and install GeCo (https://github.com/pratas/geco/), although it might be needed to install cmake. Then, it will download all the the 48 bird sequences and run the NCCD.
 
-For other purposes, such as a simple information distance between two sequences (fileA and fileB), run:
+For other purposes, such as a simple information distance between two sequences (fileA and fileB), go to scripts:
 <pre>
-cd scripts/
-. NCCD fileA fileB
+cd scripts
 </pre>
+and run
+<pre>
+. NCCD ../examples/fileA ../examples/fileB
+</pre>
+
 
 ## ISSUES ##
 
