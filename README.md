@@ -14,7 +14,7 @@ cd NCCD-master
 
 <pre>
 . run.sh
-<pre>
+</pre>
 
 It will download and install GeCo (https://github.com/pratas/geco/), although it might be needed to install cmake. Then, it will download all the the 48 bird sequences and run the NCCD.
 
@@ -27,5 +27,7 @@ For any issue let us know at [issues link](https://github.com/pratas/NCCD/issues
 GPL v2.
 
 For more information:
-<pre>http://www.gnu.org/licenses/gpl-2.0.html</pre>
+<pre>
+http://www.gnu.org/licenses/gpl-2.0.html
+</pre>
 
