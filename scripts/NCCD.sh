@@ -1,7 +1,7 @@
 #!/bin/bash
-csize="10";
+csize="40";
 GECO_IND_PARAM=" -tm 1:1:0:0/0 -tm 4:1:0:0/0 -tm 6:1:0:0/0 -tm 11:10:0:0/0 -tm 14:50:1:0/0 -tm 19:50:1:3/10 -c $csize -g 0.88 ";
-GECO_COND_PARAM=" -rm 12:100:1:0/0 -rm 20:1000:1:1/100 -tm 1:1:0:0/0 -tm 4:1:0:0/0 -tm 6:1:0:0/0 -tm 11:10:0:0/0 -tm 14:50:1:0/0 -tm 19:50:1:3/10 -c $csize -g 0.88 ";
+GECO_COND_PARAM=" -rm 13:100:1:0/0 -rm 20:1000:1:1/100 -tm 4:1:0:0/0 -tm 14:50:1:0/0 -tm 19:50:1:3/10 -c $csize -g 0.88 ";
 rm -f REPORTx REPORTy;
 echo "Running C(x) ...";
 (./GeCo $GECO_IND_PARAM $1 ) > REPORTx;
@@ -30,4 +30,3 @@ printf "\n";
 printf "====================================================\n";
 printf "NCCD: $nccd\n";
 printf "====================================================\n";
-

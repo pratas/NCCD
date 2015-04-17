@@ -1,6 +1,6 @@
 # NCCD
 
-Programs to compute the NCCD (Normalized Conditional Compression Distance) and perform phylogenomics on 48 bird species. It will use a state-of-art genomic compressor, based on a mixture of finite-context models, as a metric distance.
+Programs to compute the NCCD (Normalized Conditional Compression Distance) and perform phylogenomics (whole genome) on 48 bird species. It will use a state-of-the-art genomic compressor, based on a mixture of finite-context models, as a metric distance.
 
 ## INSTALLATION ##
 
@@ -29,7 +29,7 @@ and run
 <pre>
 . NCCD ../examples/fileA ../examples/fileB
 </pre>
-It will calculate the NCCD on two synthetic examples included in the system.
+It will calculate the NCCD on two synthetic sequence examples included in the system.
 
 ## ISSUES ##
 
