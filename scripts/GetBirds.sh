@@ -132,7 +132,12 @@ mv FB47 data/
 mv FB48 data/
 for((x=1; x<49 ; ++x)); 
   do
-  zcat B$x | grep -v ">" | tr -d "\n" > data/FB$x;
+  if (( $x == 1 || $x == 6 )); # BECAUSE THEY ARE NOT COMPRESSED
+    then
+    cat B$x | grep -v ">" | tr -d "\n" > data/FB$x;
+    else
+    zcat B$x | grep -v ">" | tr -d "\n" > data/FB$x;
+    fi
   done
 #
 
