@@ -19,12 +19,12 @@ then
   rm -f REPORTxy;
   (./GeCo $GECO_COND_PARAM -r $1 $2 ) > REPORTxy;
   Cxy=`cat REPORTxy | grep "Total bytes" | awk '{print $3;}'`;
-  nccd=`echo "scale=6; $Cxy / $Cx" | bc -l`;
+  nccd=`echo "scale=7; $Cxy / $Cx" | bc -l`;
 else
   rm -f REPORTyx;
   (./GeCo $GECO_COND_PARAM -r $2 $1 ) > REPORTyx;
   Cyx=`cat REPORTyx | grep "Total bytes" | awk '{print $3;}'`;
-  nccd=`echo "scale=6; $Cyx / $Cy" | bc -l`;
+  nccd=`echo "scale=7; $Cyx / $Cy" | bc -l`;
 fi
 printf "\n";
 printf "====================================================\n";
