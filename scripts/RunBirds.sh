@@ -1,6 +1,6 @@
 #!/bin/bash
-. GetGeco.sh
 . GetBirds.sh
+. GetGeco.sh
 cp NCCD.sh data/
 cd data/
 rm -f matrix ;

@@ -6,8 +6,8 @@ unzip master.zip
 cd geco-master
 cmake .
 make
-cp GeCo ..
+chmod +x GeCo
+cp GeCo ../data/
 cd ..
 rm -fr geco-master
-chmod +x GeCo
 echo "Done!";
