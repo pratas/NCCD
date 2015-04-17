@@ -10,8 +10,8 @@ for((x=1 ; x<=48 ; ++x));
     do
     rm -f OUTPUT;
     (. NCCD.sh FB$x FB$y ) > OUTPUT ;
-    cat OUTPUT | grep "NCCD" | awk '{ print $2;}' >> matrix ;
-    printf "\t" >> matrix ;
+    RESULT_NCCD=`cat OUTPUT | grep "NCCD" | awk '{ print $2;}'`;
+    printf "$RESULT_NCCD\t" >> matrix ;
     done
   printf "\n" >> matrix ;
   done
