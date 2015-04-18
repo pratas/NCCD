@@ -76,10 +76,10 @@ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Gallus_gallus/Assembled_chromosomes/seq/
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Gallus_gallus/Assembled_chromosomes/seq/gga_ref_Gallus_gallus-4.0_chrW.fa.gz -O TMP34
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Gallus_gallus/Assembled_chromosomes/seq/gga_ref_Gallus_gallus-4.0_unlocalized.fa.gz -O TMP35
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Gallus_gallus/Assembled_chromosomes/seq/gga_ref_Gallus_gallus-4.0_unplaced.fa.gz -O TMP36
-rm -f FB46;
+rm -f B46;
 for((x=1 ; x<37 ; ++x)); 
   do
-  zcat TMP$x >> FB46;
+  zcat TMP$x >> B46;
   done
 rm -f TMP*;
 #
@@ -93,10 +93,10 @@ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Meleagris_gallopavo/Assembled_chromosome
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Meleagris_gallopavo/Assembled_chromosomes/seq/mga_ref_Turkey_5.0_chrW.fa.gz -O TMP32
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Meleagris_gallopavo/Assembled_chromosomes/seq/mga_ref_Turkey_5.0_unlocalized.fa.gz -O TMP33
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Meleagris_gallopavo/Assembled_chromosomes/seq/mga_ref_Turkey_5.0_unplaced.fa.gz -O TMP34
-rm -f FB47;
+rm -f B47;
 for((x=1 ; x<35 ; ++x)); 
   do
-  zcat TMP$x >> FB47;
+  zcat TMP$x >> B47;
   done
 rm -f TMP*;
 #
@@ -114,26 +114,23 @@ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Taeniopygia_guttata/Assembled_chromosome
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Taeniopygia_guttata/Assembled_chromosomes/seq/tgu_ref_Taeniopygia_guttata-3.2.4_chrZ.fa.gz -O TMP29
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Taeniopygia_guttata/Assembled_chromosomes/seq/tgu_ref_Taeniopygia_guttata-3.2.4_unlocalized.fa.gz -O TMP30
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/Taeniopygia_guttata/Assembled_chromosomes/seq/tgu_ref_Taeniopygia_guttata-3.2.4_unplaced.fa.gz -O TMP31
-rm -f FB48;
-zcat TMP101A >> FB48;
-zcat TMP101B >> FB48;
-zcat TMP104A >> FB48;
+rm -f B48;
+zcat TMP101A >> B48;
+zcat TMP101B >> B48;
+zcat TMP104A >> B48;
 for((x=1 ; x<32 ; ++x)); 
   do
-  zcat TMP$x >> FB48;
+  zcat TMP$x >> B48;
   done
 rm -f TMP*;
 ###
 ###
 ###
 ### REMOVE HEADERS
-mv FB46 data/
-mv FB47 data/
-mv FB48 data/
 for((x=1; x<49 ; ++x)); 
   do
-  if (( $x == 1 || $x == 6 )); # BECAUSE THEY ARE NOT COMPRESSED
-    then
+  if (( $x == 1 || $x == 6 || $x == 46 || $x == 47 || $x == 48 )); 
+    then 
     cat B$x | grep -v ">" | tr -d "\n" > data/FB$x;
     else
     zcat B$x | grep -v ">" | tr -d "\n" > data/FB$x;
