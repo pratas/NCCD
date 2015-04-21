@@ -1,0 +1,2 @@
+http://avian.genomics.cn/en/jsp/database.shtml
+http://gigadb.org/dataset/101006
