@@ -16,7 +16,7 @@ cd NCCD-master
 Make shore you have at least 200 GB of space in the hard drive.
 Then, simply run:
 <pre>
-. run.sh
+. run.sh 
 </pre>
 
 It will download and install GeCo (https://github.com/pratas/geco/), although it might be needed to install cmake. Then, it will download all the the 48 bird sequences and run the NCCD.
@@ -27,7 +27,7 @@ cd scripts
 </pre>
 and run 
 <pre>
-. NCCD ../examples/fileA ../examples/fileB
+. NCCD.sh ../examples/fileA ../examples/fileB
 </pre>
 It will calculate the NCCD on two synthetic sequence examples included in the system.
 
