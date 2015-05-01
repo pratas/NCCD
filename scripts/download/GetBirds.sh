@@ -1,5 +1,5 @@
 #!/bin/bash
-mkdir -p data;
+mkdir -p ../data;
 WGETOP=" --trust-server-names -q ";
 function downloadEach
   {
@@ -131,9 +131,9 @@ for((x=1; x<49 ; ++x));
   do
   if (( $x == 1 || $x == 6 || $x == 46 || $x == 47 || $x == 48 )); 
     then 
-    cat B$x | grep -v ">" | tr -d "\n" > data/FB$x;
+    cat B$x | grep -v ">" | tr -d "\n" > ../data/FB$x;
     else
-    zcat B$x | grep -v ">" | tr -d "\n" > data/FB$x;
+    zcat B$x | grep -v ">" | tr -d "\n" > ../data/FB$x;
     fi
   done
 #

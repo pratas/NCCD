@@ -1,8 +1,8 @@
 #!/bin/bash
-. GetBirds.sh
-. GetGeco.sh
-cp NCCD.sh data/
-cd data/
+. ../download/GetBirds.sh
+. ../download/GetGeco.sh
+cp NCCD.sh ../data/
+cd ../data/
 rm -f matrix ;
 for((x=1 ; x<=48 ; ++x));
   do

@@ -8,6 +8,6 @@ cmake .
 make
 chmod +x GeCo
 cp GeCo ../data/
-cd ..
+cd ../
 rm -fr geco-master
 echo "Done!";
