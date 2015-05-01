@@ -1,2 +1,2 @@
 #!/bin/bash
-. scripts/RunBirds.sh
+. scripts/NCCD/RunBirds.sh
